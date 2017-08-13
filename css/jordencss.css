@@ -1,0 +1,95 @@
+body
+{
+  background-color: #18486F;
+  /*background-color: #18486F;
+  background-color: #F7555F;*/
+
+}
+h2{
+  color:white;
+  vertical-align: bottom;
+  font-size: 20px;
+  padding-left: 50px;
+  font-family: 'Anton', sans-serif;
+}
+
+h3{
+  font-family: 'Anton', sans-serif;
+  color: #F7555F;
+
+}
+
+h4{
+  font-family: 'Oswald', sans-serif;
+  color: #F7555F;
+
+}
+.main{
+  height: 400px;
+}
+
+.row
+{
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+.jordenimg
+{
+  width: 100px;
+}
+
+
+.backgroundorange{
+  /*background-color: gray;*/
+  background-color: #F7555F;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+.col-lg-12
+{
+  text-align:center;
+}
+.headers
+{
+  display:inline-block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 100px;
+  /*color: #F7555F;*/
+  color: white;
+}
+
+
+.letters
+{
+  display:inline-block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 150px;
+  color: #F7555F;
+  vertical-align: top;
+}
+
+.letters:hover
+{
+  color: white;
+}
+
+.icons
+{
+  height: 40px;
+  top: 0;
+  vertical-align: top;
+  color: #25B758;
+}
+
+.boxes{
+  padding-top:50px;
+  padding-left: 35px;
+  padding-right: 35px;
+  height:inherit;
+
+}
