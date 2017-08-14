@@ -96,7 +96,7 @@ var skills0 = '<p class="headers" style="font-size: 50px; color: #FF5E5B;">Web</
 'The charts are made with Chartjs.com. Code can be found on my <a href="https://github.com/jordenjolley">github account</a>.'+
 '</p>'+
 '</div>'
-var skills1 = '<p class="headers" style="padding-top:100px; font-size:60px;">TECH SKILLS</p>'
+var skills1 = '<p class="headers" style="padding-top:100px; font-size:80px;">TECH SKILLS</p>'
 
 var skills2 = '<p class="headers" style="font-size: 50px; color: white;">Development</p></br>'+
 '    <div align="center" style="display: inline-block; height:15vh; width:20vw;">'+
@@ -108,108 +108,127 @@ var skills2 = '<p class="headers" style="font-size: 50px; color: white;">Develop
 
 var skills3 = work3;
 
+var honors0 = '<p class="headers" style="padding-top:10px;font-size: 50px; color: #FF5E5B;">Honors</p>'+
+'</br><p class="headers" style="font-size: 30px; color: #FF5E5B;">'+
+'  - <b>Phillips 66 SHIELD Scholar:</b> Fall 2017 </br>'+
+'- <b>University Honors:</b> Fall 2015 - Spring 2017</br></p>'
+
+var honors1 = '<p class="headers" style="padding-top:100px; font-size:60px;">INTERESTS + HONORS</p>'
+
+var honors2 ='<p class="headers" style="font-size: 50px; color: white;">Interests</p></br>'+
+'<p class="headers" style="font-size: 30px; color: white;">'+
+" When I'm not hiking or searching for the greatest tacos in Austin, I love finding local, live music. I strive to help others daily."+
+'</p>'
+
+var honors3 = work3;
+
 function changingBoxes (type){
-//  $("#row0").hide();
-//  $("#row1").hide();
-//  $("#row0").fadeIn();
-//  $("#row1").fadeIn();
-//   //for loops to access each variable with window (otherwise still a string)
-//   for(i=0; i<4;i++){
-//     var inner_html = window[type+String(i)];
-//     var box_to_change = "#box"+String(i);
-//     $(box_to_change).html(inner_html).fadeIn();
-//   }
-//   //if the type is skills, they need to create these charts
-//   if (type == 'skills'){
-//     createCharts("HTML", "htmlChart", "Proficient", 45);
-//     createCharts("CSS", "cssChart", "Proficient", 30);
-//     createCharts("Javascript", "jsChart", "Novice", 20);
-//     createCharts("C#", "c#Chart", "Proficient", 50);
-//     createCharts("Python", "pythonChart", "Proficient", 45);
-//   }
-//
-// }
-//
-// function createCharts (title, chartID, prof_level_title, prof_level){
-//
-//   var ctx = document.getElementById(chartID).getContext('2d');
-//
-//   //CREATE A CHART: TESTING
-//   var chartData = {
-//       labels: [
-//           prof_level_title, //this one can change
-//           "Room to develop"
-//       ],
-//       datasets: [
-//           {
-//               data: [prof_level,60], //the first index can change
-//               backgroundColor: [
-//                   "white",
-//               ]
-//           }]
-//   };
-//
-//   var chartOptions = {
-//               responsive: true,
-//               maintainAspectRatio: false,
-//               legend: {
-//                   position: 'top',
-//                   display: false
-//               },
-//               title: {
-//                   display: true,
-//                   text: title //this can change
-//               },
-//               animation: {
-//                   animateScale: true,
-//                   animateRotate: true
-//               }
-//
-//
-//   };
-//
-//   //create the variables for the createCharts
-//   //for loops to access each variable with window (otherwise still a string)
-//     var doughnutChart = new Chart(ctx, {
-//         type: 'doughnut',
-//         data: chartData,
-//         options: chartOptions
-//     });
-// }
-//
- $(document).ready(function(){
-// //create charts for the skills section
-//
-// alert("working")
-// $("#row0").hide();
-// $("#row1").hide();
-//
-// //WHEN THE J IS PRESSED
-// //ABOUT ME STUFF HAPPENS: box0 is set to aboutme0, etc
-//
-// $('#0').click( function() {
-// //call changing boxes function
-// changingBoxes("aboutme");
-// }
-// );
-//
-//  $('#1').click( function() {
-// changingBoxes("projects");
-//  }
-// );
-//
-// $('#2').click( function() {
-// changingBoxes("work");
-// }
-// );
-//
-// $('#3').click( function() {
-// changingBoxes("extra");
-// }
-// );
-//
-// $('#4').click( function() {
-// changingBoxes("skills");
-// }
-// );
+ $("#row0").hide();
+ $("#row1").hide();
+ $("#row0").fadeIn();
+ $("#row1").fadeIn();
+  //for loops to access each variable with window (otherwise still a string)
+  for(i=0; i<4;i++){
+    var inner_html = window[type+String(i)];
+    var box_to_change = "#box"+String(i);
+    $(box_to_change).html(inner_html).fadeIn();
+  }
+  //if the type is skills, they need to create these charts
+  if (type == 'skills'){
+    createCharts("HTML", "htmlChart", "Proficient", 45);
+    createCharts("CSS", "cssChart", "Proficient", 30);
+    createCharts("Javascript", "jsChart", "Novice", 20);
+    createCharts("C#", "c#Chart", "Proficient", 50);
+    createCharts("Python", "pythonChart", "Proficient", 45);
+  }
+
+}
+
+function createCharts (title, chartID, prof_level_title, prof_level){
+
+  var ctx = document.getElementById(chartID).getContext('2d');
+
+  //CREATE A CHART: TESTING
+  var chartData = {
+      labels: [
+          prof_level_title, //this one can change
+          "Room to develop"
+      ],
+      datasets: [
+          {
+              data: [prof_level,60], //the first index can change
+              backgroundColor: [
+                  "white",
+              ]
+          }]
+  };
+
+  var chartOptions = {
+              responsive: true,
+              maintainAspectRatio: false,
+              legend: {
+                  position: 'top',
+                  display: false
+              },
+              title: {
+                  display: true,
+                  text: title //this can change
+              },
+              animation: {
+                  animateScale: true,
+                  animateRotate: true
+              }
+
+
+  };
+
+  //create the variables for the createCharts
+  //for loops to access each variable with window (otherwise still a string)
+    var doughnutChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: chartData,
+        options: chartOptions
+    });
+}
+
+$(document).ready(function(){
+//create charts for the skills section
+
+alert("working")
+$("#row0").hide();
+$("#row1").hide();
+
+//WHEN THE J IS PRESSED
+//ABOUT ME STUFF HAPPENS: box0 is set to aboutme0, etc
+
+$('#0').click( function() {
+//call changing boxes function
+changingBoxes("aboutme");
+}
+);
+
+ $('#1').click( function() {
+changingBoxes("projects");
+ }
+);
+
+$('#2').click( function() {
+changingBoxes("work");
+}
+);
+
+$('#3').click( function() {
+changingBoxes("extra");
+}
+);
+
+$('#4').click( function() {
+changingBoxes("skills");
+}
+);
+
+$('#5').click( function() {
+changingBoxes("honors");
+}
+);
 });
