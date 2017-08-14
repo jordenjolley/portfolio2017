@@ -194,7 +194,7 @@ function createCharts (title, chartID, prof_level_title, prof_level){
 $(document).ready(function(){
 //create charts for the skills section
 
-alert("working")
+//alert("working") //was a test to see if the js page is loading or errors
 $("#row0").hide();
 $("#row1").hide();
 
